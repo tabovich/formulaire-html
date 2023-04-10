@@ -13,57 +13,54 @@
 </head>
 
 <body>
-  <div>
+  <div class="container">
     <h1>Formulaire d'inscription</h1>
     
     <form method="post" action="traitement_form.php">
       
-      <label for="name">Votre nom:</label><br>
-      <input class="form-control" type="text" id="name" nom="name">
-      <br>
+      <div class="col-md-6">
+        <label for="name">Votre nom:</label><br>
+        <input class="form-control" type="text" id="name" nom="name">
+      </div>
       <label for="firstname">Votre prénom:</label><br>
       <input class="form-control" type="text" id="firstname" nom="firstname">
-      <br>
-      <div>
+      
+      <div class="col-md-6">
         <label for="age">Votre date de naissance:</label><br>
         <select name="age" id="age">
           <?php for ($i = 1920; $i <= 2020; $i++) { ?>
              <option value ="<?php echo $i ?>"><?php echo $i ?></option>
           <?php } ?>
         </select>
-          
       </div>
       
-      <br>
-      <div>
+      <div class="col-md-6">
       <label for="username">Votre nom d'utilisateur</label><br>
       <input class="form-control" type="text" id="username" nom="username">
       </div>
-      <br>
 
-      <div>
+      <div class="col-md-6">
       <label for="email">Votre adresse mail:</label><br>
       <input class="form-control" type="text" id="email" nom="email">
       </div>
       
-      <br>
-      <div>
+      <div class="col-md-6">
       <label for="password">Votre mot de passe:</label><br>
       <input class="form-control" type="text" id="password" nom="password">
       </div>  
       
       <br>
-      <div>
+      <div class="col-md-6">
       <label for="confirmedPassword">Confirmez votre mot de passe:</label><br>
       <input class="form-control" type="text" id="confirmedPassword" nom="confirmedPassword">
       </div>
 
-      <div class="form-check">
+      <div class="col-md-6" class="form-check">
         <p>Vous êtes un(e)</p>
         <input class="form-check-input" type="radio" id="sexeMan" name="sexeRadio" value="man">
         <label class="form-check-label" for="sexeMan">Homme</label>
       </div>
-      <div class="form-check">
+      <div class="col-md-6" class="form-check">
        <input class="form-check-input" type="radio" id="sexeWomen" name="sexeRadio" value="women">
        <label class="form-check-label" for="sexeWomen">Femme</label>
       </div>
